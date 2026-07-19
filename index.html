@@ -38,7 +38,7 @@
 			.site-nav {
 				display: flex;
 				gap: 20px;
-				padding: 20px 0 14px;
+				padding: 15px 0 10px;
 				border-bottom: 1px solid var(--line);
 				font-size: 0.92rem;
 			}
@@ -49,12 +49,12 @@
 				display: grid;
 				grid-template-columns: minmax(0, 1fr) 176px;
 				gap: 42px;
-				align-items: start;
-				padding: 52px 0 44px;
+				align-items: center;
+				padding: 34px 0 30px;
 			}
 			.profile-photo { grid-column: 2; grid-row: 1; }
-			.profile-photo img { display: block; width: 176px; border-radius: 12px; border: 1px solid var(--line); }
-			.profile-copy { grid-column: 1; grid-row: 1; }
+			.profile-photo img { display: block; width: 176px; height: 176px; object-fit: cover; object-position: center 24%; border-radius: 12px; border: 1px solid var(--line); }
+			.profile-copy { display: flex; min-height: 176px; flex-direction: column; justify-content: center; grid-column: 1; grid-row: 1; }
 			.legacy-profile { display: none; }
 			h1 { margin: 0 0 8px; font-size: clamp(2rem, 4vw, 2.7rem); line-height: 1.15; letter-spacing: -0.035em; }
 			.profile-role { margin: 0 0 14px; color: var(--muted); font-size: 1.1rem; }
@@ -62,15 +62,14 @@
 			.profile-links { display: flex; flex-wrap: wrap; gap: 10px 16px; margin: 22px 0 0; padding: 0; list-style: none; }
 			.profile-links a { font-weight: 650; }
 
-			main { padding-bottom: 36px; }
-			.section { padding: 35px 0; border-top: 1px solid var(--line); }
-			.section-heading { margin: 0 0 18px; font-size: 1.35rem; letter-spacing: -0.015em; }
+			main { padding-bottom: 20px; }
+			.section { padding: 24px 0; border-top: 1px solid var(--line); }
+			.section-heading { margin: 0 0 12px; font-size: 1.35rem; letter-spacing: -0.015em; }
 			.section-heading small { color: var(--muted); font-size: 0.78rem; font-weight: 500; }
-			.subheading { margin: 28px 0 12px; font-size: 1.04rem; letter-spacing: -0.01em; }
+			.subheading { margin: 12px 0 6px; font-size: 1.04rem; letter-spacing: -0.01em; }
 			.interest-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
 			.interest-list li { padding: 5px 11px; border: 1px solid #cddae6; border-radius: 999px; background: var(--accent-soft); color: #284d70; font-size: 0.92rem; }
 
-			.notice { margin: 0 0 22px; padding: 13px 16px; border-left: 3px solid #95b9d9; background: #f2f6fa; color: #45536a; font-size: 0.92rem; }
 			.publication-list { color: #293347; }
 			.publication-list img { display: none; }
 			.publication-list svg { display: none; }
@@ -106,23 +105,23 @@
 			.publication-list br { display: block; content: ""; margin-top: 15px; }
 			.publication-list dd { margin: 0; padding: 0; }
 			.publication-list a { font-weight: 650; white-space: nowrap; }
-			details { margin-top: 24px; padding: 0 16px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
-			summary { padding: 13px 0; color: var(--accent); cursor: pointer; font-weight: 700; }
+			details { margin-top: 16px; padding: 0 14px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+			summary { padding: 10px 0; color: var(--accent); cursor: pointer; font-weight: 700; }
 			details[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 16px; }
 			.selected-publications { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-			.selected-publications li { padding: 15px 0; border-bottom: 1px solid var(--line); color: #293347; }
-			.selected-publications li::before { content: attr(data-year); display: inline-block; min-width: 3.5rem; margin-right: 0.55rem; color: var(--accent); font-size: 0.82rem; font-weight: 750; letter-spacing: 0.035em; vertical-align: 0.08em; }
-			.publication-actions { display: inline-flex; flex-wrap: wrap; gap: 0.35rem; margin-left: 0.45rem; }
+			.selected-publications li { padding: 8px 0; border-bottom: 1px solid var(--line); color: #293347; }
+			.selected-publications li::before { content: attr(data-year); display: inline-block; min-width: 3.15rem; margin-right: 0.35rem; color: var(--accent); font-size: 0.82rem; font-weight: 750; letter-spacing: 0.03em; vertical-align: 0.08em; }
+			.publication-actions { display: inline-flex; flex-wrap: wrap; gap: 0.25rem; margin-left: 0.3rem; }
 			.publication-actions a { padding: 0.08rem 0.42rem; border: 1px solid #cddae6; border-radius: 999px; background: var(--accent-soft); font-size: 0.78rem; font-weight: 700; line-height: 1.35; text-decoration: none; }
-			.full-publications { margin-top: 26px; }
+			.full-publications { margin-top: 14px; }
 			.full-publications > summary { font-size: 1.02rem; }
 
 			.students { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 26px; margin: 0; padding: 0; list-style: none; }
-			.students li { padding: 10px 0; border-bottom: 1px solid #e7ecf2; }
+			.students li { padding: 8px 0; border-bottom: 1px solid #e7ecf2; }
 			.legacy-students { display: block; }
 			.legacy-students img { display: none; }
 			.legacy-students br { display: block; content: ""; margin-top: 10px; }
-			.site-footer { padding: 22px 0 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+			.site-footer { padding: 16px 0 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
 			.footer-contact { display: flex; flex-wrap: wrap; gap: 7px 24px; }
 			.footer-contact span { min-width: 0; }
 			.footer-contact strong { color: var(--ink); font-weight: 650; }
@@ -146,15 +145,16 @@
 			#research h2:not(.section-heading) img { display: none; }
 			#research h2:nth-of-type(3) ~ dd { display: block; margin: 0; padding: 10px 0; border-bottom: 1px solid #e7ecf2; }
 			#research h2:nth-of-type(3) ~ dd img { display: none; }
+			#research > dl { display: none !important; }
 
 			@media (max-width: 680px) {
 				.site-shell { width: min(100% - 28px, 1024px); }
 				.site-nav { gap: 14px; overflow-x: auto; white-space: nowrap; }
-				.site-header { grid-template-columns: 1fr; gap: 22px; padding: 30px 0 34px; }
+				.site-header { grid-template-columns: 1fr; gap: 16px; padding: 22px 0 24px; }
 				.profile-photo, .profile-copy { grid-column: 1; }
 				.profile-photo { grid-row: 1; }
-				.profile-copy { grid-row: 2; }
-				.profile-photo img { width: 128px; }
+				.profile-copy { min-height: 0; grid-row: 2; }
+				.profile-photo img { width: 128px; height: 128px; }
 				.students { grid-template-columns: 1fr; }
 				.selected-publications li::before { display: block; margin: 0 0 3px; }
 				.publication-actions { margin: 5px 0 0; }
@@ -207,6 +207,12 @@
 			<main>
 				<section class="section" id="research">
 					<h2 class="section-heading">Research Interests</h2>
+					<ul class="interest-list" aria-label="Research interests">
+						<li>Computer Algebra</li>
+						<li>Symbolic-Numeric Computation</li>
+						<li>Homomorphic Encryption</li>
+						<li>Privacy-preserving Computation</li>
+					</ul>
 		<DL>																																									
 			<DD><IMG height=14 src="./download/BlueButton.gif" width=14> Computer Algebra																																														
 		
@@ -226,8 +232,7 @@
 			</section>
 			<section class="section" id="publications">
 				<h2 class="section-heading">Publications <small>(see also at <A href="https://scholar.google.com/citations?user=C0Q2LmsAAAAJ&hl=en" target="_blank">Google Scholar</A>)</small></h2>
-				<p class="notice"><strong>Copyright Notice:</strong> <em>All of the following material are for non-commercial use only except that a specific permission is authorized from the author(s) or the corresponding copyright holder !!!</em></p>
-				<h3 class="subheading">Selected publications</h3>
+				<h3 class="subheading">Selected</h3>
 				<ol class="selected-publications">
 					<li data-year="2026">
 						Qiang He, Jingwei Chen, Wenyuan Wu, and Yong Feng. Efficient Privacy-Preserving LSTM Inference on Encrypted Sequential Data. <em>Neurocomputing</em>, 134508, 2026.
@@ -263,7 +268,7 @@
 					</li>
 				</ol>
 				<details class="full-publications">
-					<summary>Full publications</summary>
+					<summary>Full list</summary>
 				<div class="publication-list">
 
 
