@@ -107,7 +107,7 @@
 			.publication-list a { font-weight: 650; white-space: nowrap; }
 			details { margin-top: 16px; padding: 0 14px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 			summary { padding: 10px 0; color: var(--accent); cursor: pointer; font-weight: 700; }
-			details[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+			details[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 4px; }
 			.selected-publications { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 			.selected-publications li { padding: 8px 0; border-bottom: 1px solid var(--line); color: #293347; }
 			.selected-publications li::before { content: attr(data-year); display: inline-block; min-width: 3.15rem; margin-right: 0.35rem; color: var(--accent); font-size: 0.82rem; font-weight: 750; letter-spacing: 0.03em; vertical-align: 0.08em; }
@@ -115,6 +115,9 @@
 			.publication-actions a { padding: 0.08rem 0.42rem; border: 1px solid #cddae6; border-radius: 999px; background: var(--accent-soft); font-size: 0.78rem; font-weight: 700; line-height: 1.35; text-decoration: none; }
 			.full-publications { margin-top: 14px; }
 			.full-publications > summary { font-size: 1.02rem; }
+			.full-publications > .publication-list:first-of-type > br:first-of-type { display: none; }
+			.publication-list br:has(+ dd:has(a[href$="dissertation_jchen.pdf"])) { display: none; }
+			.publication-list dd:has(a[href$="dissertation_jchen.pdf"]) { display: none; }
 
 			.students { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 26px; margin: 0; padding: 0; list-style: none; }
 			.students li { padding: 8px 0; border-bottom: 1px solid #e7ecf2; }
